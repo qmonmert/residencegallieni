@@ -1,0 +1,36 @@
+# Disable the spring security default configuration from spring-boot-actuator
+management.security.enabled: true
+security.basic.enabled: false
+
+# Disable Jolokia - An http/json bridge for remote JMX access
+endpoints.jolokia.enabled: false
+
+# security configuration (this key should be unique for your application, and kept secret)
+jhipster.security.rememberme.key: cf429ea838b2583c58a49967cf3d0d2ef53a81d3
+
+async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+
+spring:
+    mail:
+        host: localhost
+        port: 25
+        user:
+        password:
+        protocol: smtp
+        tls: false
+        auth: false
+        from: residencegallieni@localhost
+
+    messageSource:
+        cacheSeconds: 1
+
+swagger:
+    title: residencegallieni API
+    description: residencegallieni applications and beyond!
+    termsOfServiceUrl: http://jhipster.github.io/
+    contact:
+    license: Apache 2.0
+    licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html

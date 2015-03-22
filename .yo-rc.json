@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "residencegallieni",
+    "packageName": "fr.residence.gallieni",
+    "packageFolder": "fr/residence/gallieni",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "useCompass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "cf429ea838b2583c58a49967cf3d0d2ef53a81d3"
+  }
+}
