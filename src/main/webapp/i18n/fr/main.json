@@ -1,7 +1,7 @@
 {
     "main": {
         "title": "Bienvenue sur le site de la Résidence Gallieni",
-        "subtitle": "Ceci est votre page d'accueil",
+        "subtitle": "Vous trouverez sur ce site les informations nécessaires sur la Résidence Gallieni",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
         },
@@ -10,7 +10,10 @@
             "homepage": "Page d'accueil de JHipster",
             "stackoverflow": "JHipster sur Stack Overflow",
             "bugtracker": "JHipster bug tracker",
-            "contact": "Contactez-nous sur Twitter @quentinmonmert"
+            "contact": {
+                "quentin": "Contactez @quentinmonmert sur Twitter",
+                "thibaud": "Contactez @Tiibbood sur Twitter"
+            }
         },
         "like": "Si vous aimez JHipster, donnez nous une étoile sur",
         "github": "Github"

@@ -1,7 +1,7 @@
 {
     "main": {
         "title": "Welcome, on the site of the Residence Gallieni",
-        "subtitle": "This is your homepage",
+        "subtitle": "You will find informations concerning the Residence Gallieni",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
@@ -10,7 +10,10 @@
             "homepage": "JHipster homepage",
             "stackoverflow": "JHipster on Stack Overflow",
             "bugtracker": "JHipster bug tracker",
-            "contact": "contact @quentinmonmert on Twitter"
+            "contact": {
+                "quentin": "contact @quentinmonmert on Twitter",
+                "thibaud": "contact @Tiibbood on Twitter"
+            }
         },
         "like": "If you like JHipster, don't forget to give us a star on",
         "github": "Github"

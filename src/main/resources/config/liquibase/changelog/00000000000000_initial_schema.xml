@@ -15,7 +15,7 @@
         JHipster core tables.
         The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
     -->
-    <changeSet id="00000000000001" author="jhipster">
+    <changeSet id="00000000000002" author="jhipster">
         <createTable tableName="T_USER">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
@@ -111,6 +111,15 @@
             <column name="activated" type="boolean"/>
             <column name="created_date" type="timestamp"/>
         </loadData>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/newUsers.csv"
+                  separator=";"
+                  tableName="T_USER">
+            <column name="activated" type="boolean"/>
+            <column name="created_date" type="timestamp"/>
+        </loadData>
+
         <dropDefaultValue tableName="T_USER" columnName="created_date" columnDataType="datetime"/>
 
         <loadData encoding="UTF-8"
@@ -164,5 +173,5 @@
                                  referencedColumnNames="event_id"
                                  referencedTableName="T_PERSISTENT_AUDIT_EVENT"/>
     </changeSet>
-    
+
 </databaseChangeLog>
