@@ -66,25 +66,25 @@ module.exports = function (grunt) {
                     /swagger-ui/,
                     'bower_components/bootstrap/' // Exclude Bootstrap LESS as we use bootstrap-sass
                 ],
-                ignorePath: /\.\.\/webapp\/bower_components\// // remove ../webapp/bower_components/ from paths of injected sass files 
-            },
-            test: {
-                src: 'src/test/javascript/karma.conf.js',
-                exclude: [/angular-i18n/, /swagger-ui/, /angular-scenario/],
-                ignorePath: /\.\.\/\.\.\//, // remove ../../ from paths of injected javascripts
-                devDependencies: true,
-                fileTypes: {
-                    js: {
-                        block: /(([\s\t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
-                        detect: {
-                            js: /'(.*\.js)'/gi
-                        },
-                        replace: {
-                            js: '\'{{filePath}}\','
-                        }
-                    }
-                }
+                ignorePath: /\.\.\/webapp\/bower_components\// // remove ../webapp/bower_components/ from paths of injected sass files
             }
+            //test: {
+            //    src: 'src/test/javascript/karma.conf.js',
+            //    exclude: [/angular-i18n/, /swagger-ui/, /angular-scenario/],
+            //    ignorePath: /\.\.\/\.\.\//, // remove ../../ from paths of injected javascripts
+            //    devDependencies: true,
+            //    fileTypes: {
+            //        js: {
+            //            block: /(([\s\t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
+            //            detect: {
+            //                js: /'(.*\.js)'/gi
+            //            },
+            //            replace: {
+            //                js: '\'{{filePath}}\','
+            //            }
+            //        }
+            //    }
+            //}
         },
         browserSync: {
             dev: {
@@ -351,12 +351,12 @@ module.exports = function (grunt) {
                 'svgmin'
             ]
         },
-        karma: {
-            unit: {
-                configFile: 'src/test/javascript/karma.conf.js',
-                singleRun: true
-            }
-        },
+        //karma: {
+        //    unit: {
+        //        configFile: 'src/test/javascript/karma.conf.js',
+        //        singleRun: true
+        //    }
+        //},
         cdnify: {
             dist: {
                 html: ['<%= yeoman.dist %>/*.html']
@@ -439,8 +439,8 @@ module.exports = function (grunt) {
         'clean:server',
         'wiredep:test',
         'ngconstant:dev',
-        'concurrent:test',
-        'karma'
+        'concurrent:test'
+        //'karma'
     ]);
 
     grunt.registerTask('build', [

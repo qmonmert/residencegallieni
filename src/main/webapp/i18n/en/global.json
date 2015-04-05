@@ -28,7 +28,9 @@
                 "apidocs": "API",
                 "database": "Database"
             },
-            "language": "Language"
+            "language": "Language",
+            "info": "Information",
+            "apartments": "Apartments"
         },
         "form": {
             "username": "Login",

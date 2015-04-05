@@ -1,9 +1,25 @@
 @charset "UTF-8";
 
-.residenceAccueil {
+.residenceAccueil1 {
     display: inline-block;
     width: 347px;
     height: 497px;
-    background: url("../images/residenceAccueil.jpg") no-repeat center top;
+    background: url("../images/vue1.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.residenceAccueil2 {
+    display: inline-block;
+    width: 347px;
+    height: 497px;
+    background: url("../images/vue8.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.residenceApartment {
+    display: inline-block;
+    width: 347px;
+    height: 497px;
+    background: url("../images/vue7.jpg") no-repeat center top;
     background-size: contain;
 }

@@ -5,10 +5,11 @@ angular.module('residencegallieniApp')
         return {
             getCurrent: function () {
                 var deferred = $q.defer();
-                var language = $translate.storage().get('NG_TRANSLATE_LANG_KEY');
+                //var language = $translate.storage().get('NG_TRANSLATE_LANG_KEY');
+                var language = 'fr';
 
                 if (angular.isUndefined(language)) {
-                    language = 'en';
+                    language = 'fr';
                 }
 
                 deferred.resolve(language);
@@ -27,7 +28,7 @@ angular.module('residencegallieniApp')
  They are written in English to avoid character encoding issues (not a perfect solution)
  */
     .constant('LANGUAGES', [
-        'en', 'fr'
+        'fr'
         //JHipster will add new languages here
     ]
 );
