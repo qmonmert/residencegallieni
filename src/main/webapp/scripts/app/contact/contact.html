@@ -1,0 +1,43 @@
+<div>
+    <table class="table table-hover table-striped">
+        <tbody>
+        <tr>
+            <td><i class="glyphicon glyphicon-user"></i> Nom</td>
+            <td>DURANT Jean</td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-inbox"></i> Email</td>
+            <td>jean.durant@gmail.com</td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-phone-alt"></i> Tel.</td>
+            <td>06 45 53 90 72</td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-home"></i> Adresse</td>
+            <td>25 rue Bleue, 75018 Paris, FRANCE</td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-link"></i> Site web</td>
+            <td class="tooltip-customized">
+                <a id="site" href="http://www.exemple.com" target="_blank" data-toggle="tooltip">
+                    http://www.exemple.com
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    // Tooltip
+    $("#site").tooltip({
+        placement : 'top',
+        html: true,
+        title: 'http://www.exemple.com'
+    });
+
+    //]]>
+</script>

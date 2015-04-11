@@ -23,13 +23,14 @@
         <!--[if lt IE 10]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+        <!--<div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
+        <div ng-show="false" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
         <div class="container">
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer">This is your footer</p>
+                <p translate="footer"></p>
             </div>
         </div>
 
@@ -60,7 +61,6 @@
         <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
-        <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
@@ -129,7 +129,9 @@
         <script src="scripts/app/apartments/apartments.controller.js"></script>
         <script src="scripts/app/apartment/apartment.js"></script>
         <script src="scripts/app/apartment/apartment.controller.js"></script>
+        <script src="scripts/app/photos/photos.js"></script>
         <script src="scripts/app/info/info.js"></script>
+        <script src="scripts/app/contact/contact.js"></script>
 
 </body>
 </html>

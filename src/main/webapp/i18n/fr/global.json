@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "residencegallieni",
+        "title": "Résidence Gallieni",
         "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
         "menu": {
             "home": "Accueil",
@@ -30,7 +30,9 @@
             },
             "language": "Langue",
             "info": "Information",
-            "apartments": "Appartements"
+            "apartments": "Appartements",
+            "photos": "Photos",
+            "contact": "Contact"
         },
         "form": {
             "username": "Nom d'utilisateur",

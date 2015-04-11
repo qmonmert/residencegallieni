@@ -30,7 +30,9 @@
             },
             "language": "Language",
             "info": "Information",
-            "apartments": "Apartments"
+            "apartments": "Apartments",
+            "photos": "Photos",
+            "contact": "Contact"
         },
         "form": {
             "username": "Login",
