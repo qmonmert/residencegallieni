@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span translate="global.title">jhipster</span> <span class="navbar-version">v{{VERSION}}</span></a>
+            <a class="navbar-brand" href="#"><span translate="global.title"></span> <span class="navbar-version">v{{VERSION}}</span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="isAuthenticated()">
             <ul class="nav navbar-nav nav-pills navbar-right">
@@ -24,9 +24,21 @@
                     </a>
                 </li>
                 <li ui-sref-active="active">
+                    <a ui-sref="photos">
+                        <span class="glyphicon glyphicon-picture"></span>
+                        <span translate="global.menu.photos">Photos</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
                     <a ui-sref="info">
                         <span class="glyphicon glyphicon-flag"></span>
                         <span translate="global.menu.info">Info</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="contact">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span translate="global.menu.contact">Info</span>
                     </a>
                 </li>
                 <!--<li ui-sref-active="active" ng-switch-when="true" class="dropdown pointer">-->

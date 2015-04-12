@@ -154,3 +154,10 @@ h1::firstletter {
     background: url("../images/vue7.jpg") no-repeat center top;
     background-size: contain;
 }
+
+.tooltip-customized .tooltip-inner {
+    color: #FFF;
+    background: #428bca;
+    border: solid 1px #000;
+    max-width: 1000px;
+}
