@@ -101,6 +101,18 @@ h1::firstletter {
 
 .footer {
 	background-color : black;
+	color : white;
+	boder : 0px;
+}
+
+.footer .table tr{
+	borderwidth: 0px;
+	border-color : red;
+}
+
+.footer .table tr td{
+	border-color : black;
+	borderwidth: 0px;
 }
 
 .info {
