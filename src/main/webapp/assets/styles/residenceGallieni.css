@@ -1,18 +1,149 @@
 @charset "UTF-8";
 
+body {
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../images/fond.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.img-full {
+    min-width: 100%;
+}
+
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
+}
+
+.brand-before {
+    margin: 15px 0;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 4em;
+}
+
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+
+h1::firstletter {
+	font-size : 190%;
+}
+
+.container {
+	background-color : transparent;
+	color : #000000;
+}
+
+.footer {
+	background-color : black;
+}
+
+.info {
+	width : 70%;
+	border : solid 1px grey;
+	margin : 10px;
+	padding : 10px;
+}
+
+
+.important {
+	color : #33CCFF;
+	font-size : 170%;
+	text-transform: uppercase;
+}
+
+#presentationGenerale h4 {
+	color: #ff0080;
+	text-transform: uppercase;
+}
+
+
 .residenceAccueil1 {
     display: inline-block;
-    width: 347px;
-    height: 497px;
+    width: 510px;
+    height: 510px;
     background: url("../images/vue1.jpg") no-repeat center top;
     background-size: contain;
 }
 
 .residenceAccueil2 {
     display: inline-block;
-    width: 347px;
-    height: 497px;
+    width: 510px;
+    height: 510px;
     background: url("../images/vue8.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.residenceAccueil3 {
+    display: inline-block;
+    width: 510px;
+    height: 510px;
+    background: url("../images/vue6.jpg") no-repeat center top;
     background-size: contain;
 }
 

@@ -1,6 +1,6 @@
 {
     "main": {
-        "title": "Bienvenue sur le site de la Résidence Gallieni",
+        "title": "Résidence Gallieni",
         "subtitle": "Vous trouverez sur ce site les informations nécessaires sur la Résidence Gallieni",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
