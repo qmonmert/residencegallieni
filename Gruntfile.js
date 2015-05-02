@@ -402,7 +402,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 options: {
-                    dest: 'src/main/webapp/scripts/app/app.constants.js',
+                    dest: 'src/main/webapp/scripts/app/app.constants.js'
                 },
                 constants: {
                     ENV: 'dev',
@@ -411,7 +411,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    dest: '.tmp/scripts/app/app.constants.js',
+                    dest: '.tmp/scripts/app/app.constants.js'
                 },
                 constants: {
                     ENV: 'prod',
@@ -423,7 +423,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('serve', [
         'clean:server',
-        'wiredep',
+        //'wiredep',
         'ngconstant:dev',
         'concurrent:server',
         'browserSync',
@@ -437,7 +437,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        'wiredep:test',
+        //'wiredep:test',
         'ngconstant:dev',
         'concurrent:test'
         //'karma'
@@ -445,7 +445,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'wiredep:app',
+        //'wiredep:app',
         'ngconstant:prod',
         'useminPrepare',
         'ngtemplates',

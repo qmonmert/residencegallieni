@@ -46,6 +46,7 @@
         <sonar-maven-plugin.version>2.3</sonar-maven-plugin.version>
         <swagger-springmvc.version>0.9.5</swagger-springmvc.version>
         <usertype-core.version>3.2.0.GA</usertype-core.version>
+        <tomcat.version>7.0.61</tomcat.version>
     </properties>
 
     <dependencies>
@@ -139,13 +140,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- The HikariCP Java Agent is disabled by default, as it is experimental
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP-agent</artifactId>
-            <version>${HikariCP.version}</version>
-        </dependency>
-        -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -553,11 +547,12 @@
     </build>
 
     <profiles>
+
         <profile>
             <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            <!--<activation>-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
             <properties>
                 <!-- log configuration -->
                 <logback.loglevel>DEBUG</logback.loglevel>
@@ -568,82 +563,39 @@
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </dependency>
             </dependencies>
-            <!--<build>-->
-            <!--<plugins>-->
-            <!--<plugin>-->
-            <!--<groupId>com.github.trecloux</groupId>-->
-            <!--<artifactId>yeoman-maven-plugin</artifactId>-->
-            <!--<version>0.4</version>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<id>run-grunt</id>-->
-            <!--<phase>generate-resources</phase>-->
-            <!--<goals>-->
-            <!--<goal>build</goal>-->
-            <!--</goals>-->
-            <!--<configuration>-->
-            <!--<skipTests>true</skipTests>-->
-            <!--<buildTool>grunt</buildTool>-->
-            <!--</configuration>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--<configuration>-->
-            <!--<yeomanProjectDirectory>${project.basedir}</yeomanProjectDirectory>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-            <!--</plugins>-->
-            <!--</build>-->
         </profile>
+
         <profile>
-            <id>fast</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <configuration>
-                            <arguments>
-                                <argument>--spring.profiles.active=dev,fast</argument>
-                            </arguments>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <properties>
-                <!-- log configuration -->
-                <logback.loglevel>DEBUG</logback.loglevel>
-            </properties>
+            <id>prod</id>
             <dependencies>
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-undertow</artifactId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
                 </dependency>
             </dependencies>
-        </profile>
-        <profile>
-            <id>prod</id>
             <build>
                 <plugins>
-                    <!--<plugin>-->
-                    <!--<groupId>com.github.trecloux</groupId>-->
-                    <!--<artifactId>yeoman-maven-plugin</artifactId>-->
-                    <!--<version>0.4</version>-->
-                    <!--<executions>-->
-                    <!--<execution>-->
-                    <!--<id>run-frontend-build</id>-->
-                    <!--<phase>generate-resources</phase>-->
-                    <!--<goals>-->
-                    <!--<goal>build</goal>-->
-                    <!--</goals>-->
-                    <!--<configuration>-->
-                    <!--<buildTool>grunt</buildTool>-->
-                    <!--</configuration>-->
-                    <!--</execution>-->
-                    <!--</executions>-->
-                    <!--<configuration>-->
-                    <!--<yeomanProjectDirectory>${project.basedir}</yeomanProjectDirectory>-->
-                    <!--</configuration>-->
-                    <!--</plugin>-->
+                    <plugin>
+                        <groupId>com.github.trecloux</groupId>
+                        <artifactId>yeoman-maven-plugin</artifactId>
+                        <version>0.4</version>
+                        <executions>
+                            <execution>
+                                <id>run-frontend-build</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>build</goal>
+                                </goals>
+                                <configuration>
+                                    <buildTool>grunt</buildTool>
+                                    <buildArgs>build --force --no-color</buildArgs>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <yeomanProjectDirectory>${project.basedir}</yeomanProjectDirectory>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <artifactId>maven-clean-plugin</artifactId>
                         <version>2.5</version>
@@ -676,12 +628,8 @@
                 <!-- log configuration -->
                 <logback.loglevel>INFO</logback.loglevel>
             </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </dependency>
-            </dependencies>
         </profile>
+
     </profiles>
+
 </project>

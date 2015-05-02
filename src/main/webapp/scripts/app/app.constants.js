@@ -4,6 +4,6 @@ angular.module('residencegallieniApp')
 
 .constant('ENV', 'dev')
 
-.constant('VERSION', '0.0.2')
+.constant('VERSION', '0.0.1-SNAPSHOT')
 
 ;
